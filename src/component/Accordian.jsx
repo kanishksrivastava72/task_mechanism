@@ -19,7 +19,7 @@ const Accordian = ({ faqData }) => {
             <button
               className="accordion-header"
               onClick={() => {
-                handleAccordian(activeIndex === index);
+                handleAccordian(index);
               }}
               style={{
                 width: "100%",
@@ -42,7 +42,7 @@ const Accordian = ({ faqData }) => {
                 </svg>
               </span>
             </button>
-            {toggleAccordian && (
+            {activeIndex === index && (
               <div
                 class="accordion-content active"
                 style={{
